@@ -1,5 +1,7 @@
 <?php
 
+
+
 function enqueue_parent_styles() 
 {
    wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
@@ -120,7 +122,7 @@ function preschool_and_kindergarten_customize_register_content( $wp_customize )
 }
 add_action( 'customize_register', 'preschool_and_kindergarten_customize_register_content' );
 
-/* Rigester required plugins in addition to required by the parent theme */
+/* Register required plugins in addition to required by the parent theme */
 function crs_register_required_plugins() {
     /*
      * Array of plugin arrays. Required keys are name and slug.
@@ -163,4 +165,18 @@ function crs_register_required_plugins() {
     tgmpa( $plugins, $config);
 }
 add_action( 'tgmpa_register', 'crs_register_required_plugins', 15 );
+
+
+function preschool_and_kindergarten_ed_section()
+{
+	$preschool_and_kindergarten_page_sections = array('smartslider', 'content', 'about', 'lessons', 'services', 'promotional', 'program', 'testimonials', 'staff', 'news');
+	$en_sec = false;
+	foreach( $preschool_and_kindergarten_page_sections as $section ){ 
+		if( get_theme_mod( 'preschool_and_kindergarten_ed_' . $section . '_section' ) == 1 ){
+			$en_sec = true;
+		}
+	}
+	return $en_sec;
+}
+
 ?>
