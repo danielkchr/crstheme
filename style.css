@@ -1,11 +1,15 @@
 /*
 Theme Name: Central Russian School
-Theme URL: http://example.com
-Description: Twenty Seventeen Child Theme
-Author: John Doe
-Author URL: http://example.com
+Theme URL: https://github.com/danielkchr/crstheme
+Description: Central Russian School Template
+Author: Daniel Kucherenko
+Author URL: https://github.com/danielkchr
 Template: preschool-and-kindergarten
 Version: 1.0.0
 Text Domain: centralrussianschool
 GitHub Theme URI: https://github.com/danielkchr/crstheme
 */
+
+.home-content {
+	margin-top: 20px;
+}
